@@ -9,7 +9,7 @@
 /*   Updated: 2025/01/05 21:13:13 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <unistd.h>
 
 int	ft_str_is_numeric(char *str)

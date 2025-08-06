@@ -9,7 +9,7 @@
 /*   Updated: 2025/01/06 21:43:20 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <unistd.h>
 
 int	ft_str_is_alpha(char *str)

@@ -9,7 +9,7 @@
 /*   Updated: 2025/01/05 21:40:49 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <unistd.h>
 
 int	ft_str_is_lowercase(char *str)

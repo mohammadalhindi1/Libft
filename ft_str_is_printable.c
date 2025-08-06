@@ -9,7 +9,7 @@
 /*   Updated: 2025/01/06 22:17:16 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <unistd.h>
 
 int	ft_str_is_printable(char *str);

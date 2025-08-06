@@ -1,6 +1,7 @@
 #include "libft.h"
+//find last occurrence of character in string
 
-char	*ft_strrchr(const char *s, int c) //find last occurrence of character in string
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 

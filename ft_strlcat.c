@@ -9,7 +9,7 @@
 /*   Updated: 2025/01/12 19:17:35 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <stdio.h>
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)

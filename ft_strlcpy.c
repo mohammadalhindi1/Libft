@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <unistd.h>
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
@@ -31,10 +30,10 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
  int main()
 {
      char str[] = "test de chaine";
-     char str2[] = "abc";
+     char str2[] = "abc123";
 
-     ft_strlcpy(str, str2, 3);
+     ft_strlcpy(str, str2, 5);
      printf("%s\n", str);
      return 0;
 }
- */
+*/

@@ -5,11 +5,11 @@ RM = rm -f
 # لحذف الملفات
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = calloc.c ft_atoi.c \
-       memset.c memmove.c memcmp.c \
-       memcpy.c memchr.c isascii.c \
-       strrchr.c strnstr.c strchr.c \
-       isalnum.c ft_strncmp.c ft_strlcpy.c \
+SRCS = ft_calloc.c ft_atoi.c \
+       ft_memset.c ft_memmove.c ft_memcmp.c \
+       ft_memcpy.c ft_memchr.c ft_isascii.c \
+       ft_strrchr.c ft_strnstr.c ft_strchr.c \
+       ft_isalnum.c ft_strncmp.c ft_strlcpy.c \
        ft_str_is_alpha.c ft_bzero.c ft_strlen.c \
        ft_strlcat.c ft_strdup.c ft_str_is_uppercase.c \
        ft_str_is_numeric.c ft_str_is_lowercase.c ft_str_is_printable.c

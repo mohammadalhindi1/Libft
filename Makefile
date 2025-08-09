@@ -1,8 +1,6 @@
 NAME = libft.a
 CC = cc
-#C compiler
 RM = rm -f
-# لحذف الملفات
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = ft_calloc.c ft_atoi.c \
@@ -10,9 +8,12 @@ SRCS = ft_calloc.c ft_atoi.c \
        ft_memcpy.c ft_memchr.c ft_isascii.c \
        ft_strrchr.c ft_strnstr.c ft_strchr.c \
        ft_isalnum.c ft_strncmp.c ft_strlcpy.c \
-       ft_str_is_alpha.c ft_bzero.c ft_strlen.c \
-       ft_strlcat.c ft_strdup.c ft_str_is_uppercase.c \
-       ft_str_is_numeric.c ft_str_is_lowercase.c ft_str_is_printable.c
+       ft_isalpha.c ft_bzero.c ft_strlen.c \
+       ft_strlcat.c ft_strdup.c ft_toupper.c \
+       ft_isdigit.c ft_tolower.c ft_isprint.c \
+       ft_putstr_fd.c ft_split.c ft_striteri.c \
+       ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+       ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_substr.c ft_itoa.c 
 
 OBJS = $(SRCS:.c=.o)
 

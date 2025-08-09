@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 18:13:24 by malhendi          #+#    #+#             */
-/*   Updated: 2025/01/07 18:13:40 by malhendi         ###   ########.fr       */
+/*   Created: 2025/01/06 22:17:06 by malhendi          #+#    #+#             */
+/*   Updated: 2025/01/06 22:17:16 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_isprint(char *str)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	size -= 1;
-	while (src[i] && (i < size))
+	i = 0 ;
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (str[i] < 32 || str[i] > 126)
+			return (0);
 		i++;
 	}
-	dest[i] = '\0';
-	return (i);
+	return (1);
 }
 
 /*
- int main()
+int main(void)
 {
-     char str[] = "test de chaine";
-     char str2[] = "abc123";
-
-     ft_strlcpy(str, str2, 5);
-     printf("%s\n", str);
-     return 0;
+    char str[] = "HI";
+    int a ;
+    
+    //\a = ft_str_is_printable(str);
+    
+    //printf(" %d\n", str,a );
+    printf("  %d\n", ft_str_is_printable(str));
 }
 */

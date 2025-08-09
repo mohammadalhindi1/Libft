@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 18:13:24 by malhendi          #+#    #+#             */
-/*   Updated: 2025/01/07 18:13:40 by malhendi         ###   ########.fr       */
+/*   Created: 2025/01/05 21:13:00 by malhendi          #+#    #+#             */
+/*   Updated: 2025/01/05 21:13:13 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_isdigit(char *str)
 {
-	size_t	i;
+	int	x;
 
-	i = 0;
-	size -= 1;
-	while (src[i] && (i < size))
+	x = 0;
+	while (str[x] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if (str[x] >= '0' && str[x] <= '9')
+		{
+			x++;
+			continue ;
+		}
+		else
+		{
+			return (0);
+		}
+		x++;
 	}
-	dest[i] = '\0';
-	return (i);
+	return (1);
 }
-
-/*
- int main()
-{
-     char str[] = "test de chaine";
-     char str2[] = "abc123";
-
-     ft_strlcpy(str, str2, 5);
-     printf("%s\n", str);
-     return 0;
-}
-*/

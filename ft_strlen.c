@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 18:13:24 by malhendi          #+#    #+#             */
-/*   Updated: 2025/01/07 18:13:40 by malhendi         ###   ########.fr       */
+/*   Created: 2025/01/02 23:07:56 by malhendi          #+#    #+#             */
+/*   Updated: 2025/01/02 23:08:00 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+#include "libft.h"  
+
+size_t	strlen(const char *str)
 {
-	size_t	i;
+	size_t	n;
 
-	i = 0;
-	size -= 1;
-	while (src[i] && (i < size))
+	n = 0;
+	while (str[n] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		n++;
 	}
-	dest[i] = '\0';
-	return (i);
+	return (n);
 }
-
-/*
- int main()
-{
-     char str[] = "test de chaine";
-     char str2[] = "abc123";
-
-     ft_strlcpy(str, str2, 5);
-     printf("%s\n", str);
-     return 0;
-}
-*/

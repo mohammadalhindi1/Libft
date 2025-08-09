@@ -1,39 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 18:13:24 by malhendi          #+#    #+#             */
-/*   Updated: 2025/01/07 18:13:40 by malhendi         ###   ########.fr       */
+/*   Created: 2025/01/06 22:08:36 by malhendi          #+#    #+#             */
+/*   Updated: 2025/01/06 22:08:45 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	size -= 1;
-	while (src[i] && (i < size))
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (i);
+	if (c >= 'a' && c <= 'z')
+		c -= ' ';
+	return (c);
 }
-
-/*
- int main()
-{
-     char str[] = "test de chaine";
-     char str2[] = "abc123";
-
-     ft_strlcpy(str, str2, 5);
-     printf("%s\n", str);
-     return 0;
-}
-*/

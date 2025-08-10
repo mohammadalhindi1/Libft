@@ -15,7 +15,7 @@ int	ft_isalpha(char *str)
 {
 	int	i;
 
-	i = 0 ;
+	i = 0;
 	while (str[i] != '\0')
 	{
 		if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z'))
@@ -27,7 +27,9 @@ int	ft_isalpha(char *str)
 /*
  * int main(void)
 {
-    char str[] = "h2i";
+	char	str[];
+
+    str[] = "h2i";
     int a ;
     
     a = ft_str_is_alpha(str);

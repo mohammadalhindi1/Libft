@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 20:33:31 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/10 20:33:34 by malhendi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -10,4 +22,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(array, (nmemb * size));
 	return (array);
 }
-// This function is part of the C standard library and is used to allocate memory for an array

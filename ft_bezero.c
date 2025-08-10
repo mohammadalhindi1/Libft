@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bezero.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 18:21:37 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/10 18:21:40 by malhendi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -9,10 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		str[i] = 0;
+		str[i] = '\0';
 		i++;
 	}
-    if (n > 0)
-        str[n - 1] = 0; // Ensure the last byte is set to zero 
 }
-// This function sets the first n bytes of the memory area pointed to by s to zero.

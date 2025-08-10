@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 20:36:42 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/10 20:36:43 by malhendi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
@@ -28,13 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*This code is a C implementation of the memmove function, 
-which safely copies memory from one location to another, 
-handling overlapping regions correctly. 
-The function checks if the destination is greater than the source 
-to determine the direction of copying, ensuring that data is not corrupted during the move.
-It uses a loop to copy each byte from the source to the destination, 
-adjusting pointers based on whether the copy is forward or backward.
-If either pointer is NULL, it returns NULL. The function 
-is designed to work with any type of data, as it operates on byte-level pointers. 
-*/

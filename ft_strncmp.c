@@ -27,10 +27,11 @@ size_t	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 /*
-int main()
+int	main(void)
 {
-	char a[100];
-	char b[100];
+	char	a[100];
+	char	b[100];
+
 	strcpy(a, "A0234");
 	strcpy(b, "A02232");
 	printf("Result %i\n", ft_strncmp(a,b,5));

@@ -15,7 +15,7 @@ int	ft_isprint(char *str)
 {
 	int	i;
 
-	i = 0 ;
+	i = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] < 32 || str[i] > 126)
@@ -26,9 +26,11 @@ int	ft_isprint(char *str)
 }
 
 /*
-int main(void)
+int	main(void)
 {
-    char str[] = "HI";
+	char	str[];
+
+    str[] = "HI";
     int a ;
     
     //\a = ft_str_is_printable(str);

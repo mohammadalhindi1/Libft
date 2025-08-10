@@ -29,11 +29,13 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 /*
  int main()
 {
-     char str[] = "test de chaine";
-     char str2[] = "abc123";
+	char	str[];
+	char	str2[];
 
+     str[] = "test de chaine";
+     str2[] = "abc123";
      ft_strlcpy(str, str2, 5);
      printf("%s\n", str);
-     return 0;
+     return (0);
 }
 */

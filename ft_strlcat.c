@@ -13,8 +13,8 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	i ;
-	size_t	x ;
+	size_t	i;
+	size_t	x;
 	size_t	z;
 	size_t	dl;
 	size_t	sl;
@@ -40,7 +40,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (dl + sl);
 }
 /*
-int	main() {
+int	main(void) {
 	char src[] = "alhindi";
 	char dest[20] = "mohammad";
 

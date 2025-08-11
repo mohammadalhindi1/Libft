@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 15:14:03 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/07 15:14:09 by malhendi         ###   ########.fr       */
+/*   Created: 2025/01/12 10:46:40 by malhendi          #+#    #+#             */
+/*   Updated: 2025/01/12 11:29:06 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
+	while ((char)c != *s)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		if (!*s)
+			return (0);
+		s++;
 	}
-	return NULL;
+	return ((char *)s);
 }
 
 /*
-int main(void)
+int	main(void)
 {
 	char str[] = "mohammad";
-	char c = 'a';
-	char *res = ft_strrchr(str, c);
+	int c = 'a';
+	char *ptr = ft_strchr(str, c);
 
-	if (res)
-		printf("found '%c' at index %ld\n", *res, res - str);
+	if (ptr != NULL)
+		printf("Found char: %c at position: %ld\n", *ptr, ptr - str);
 	else
-		printf("character '%c' not found\n", c);
+		printf("Character not found!\n");
 
 	return 0;
 }

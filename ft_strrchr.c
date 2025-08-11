@@ -1,11 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strchr.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/07 15:14:03 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/07 15:14:09 by malhendi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
-//find last occurrence of character in string
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
+	int i = 0;
 	while (s[i])
 		i++;
 	while (i >= 0)
@@ -14,5 +22,21 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)(s + i));
 		i--;
 	}
-	return (0);
+	return NULL;
 }
+
+/*
+int main(void)
+{
+	char str[] = "mohammad";
+	char c = 'a';
+	char *res = ft_strrchr(str, c);
+
+	if (res)
+		printf("found '%c' at index %ld\n", *res, res - str);
+	else
+		printf("character '%c' not found\n", c);
+
+	return 0;
+}
+*/

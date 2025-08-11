@@ -11,35 +11,32 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	while (*s)
+	int i = 0;
+	while (s[i])
+		i++;
+	while (i >= 0)
 	{
-		if (*s == c)
-			return (*s);
-		s++;
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	return (0);
+	return NULL;
 }
 
-
-int	main(void)
-{
-	char str [] = "mohammad";
-	int c = 'a';
-	printf("%c\n",ft_strchr(str,c)); 
-}
 /*
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+int main(void)
 {
-	while ((char)c != *s)
-	{
-		if (!*s)
-			return (0);
-		s++;
-	}
-	return ((char *)s);
+	char str[] = "mohammad";
+	char c = 'a';
+	char *res = ft_strrchr(str, c);
+
+	if (res)
+		printf("found '%c' at index %ld\n", *res, res - str);
+	else
+		printf("character '%c' not found\n", c);
+
+	return 0;
 }
 */

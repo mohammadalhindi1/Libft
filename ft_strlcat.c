@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <string.h>
+//#include <bsd/bsd.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -41,10 +43,22 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 }
 /*
 int	main(void) {
-	char src[] = "alhindi";
-	char dest[20] = "mohammad";
+	char dest[] = "mohammad";
+	char src[] = "abcdf";
 
-	printf("%d", ft_strlcat(dest, src,4));
+	printf("\n%zu\n", ft_strlcat(dest, src,4));
+	char	str1[] = "mohammad";
+	char	str2[] = "abcdf";
+
+	size_t size1 = ft_strlcat(str1, str2, 4);
+	printf("%s\n %ld\n", str1, size1);
+
+	char	str3[] = "mohammad";
+	char	str4[] = "abcdf";
+
+	size_t size2 = ft_strlcat(str3, str4, 4);
+	printf("%s\n %ld\n", str3, size2);
+	return (0);
 
 }
 */

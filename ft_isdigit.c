@@ -11,23 +11,19 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	int	x;
-
-	x = 0;
-	while (str[x] != '\0')
-	{
-		if (str[x] >= '0' && str[x] <= '9')
-		{
-			x++;
-			continue ;
-		}
-		else
-		{
-			return (0);
-		}
-		x++;
-	}
-	return (1);
+	if(c >= '0' && c <= '9')
+		return(1);
+	return(0);
 }
+/*
+int main(void)
+{
+	int s;
+
+	s = '1';    
+	printf("%c\n", s);
+	printf("%d\n",ft_isdigit(s));
+}
+*/

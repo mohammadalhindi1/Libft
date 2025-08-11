@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	n;
 
@@ -23,3 +23,13 @@ size_t	strlen(const char *str)
 	}
 	return (n);
 }
+
+/*
+int	main(void)
+{
+	char *str;
+
+	str = "mohammad"; 
+    printf("%zu\n", ft_strlen(str));
+}
+*/

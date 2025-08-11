@@ -9,33 +9,23 @@
 /*   Updated: 2025/01/06 22:17:16 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isprint(char *str)
+int	ft_isprint(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 32 || str[i] > 126)
-			return (0);
-		i++;
-	}
-	return (1);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
 
 /*
 int	main(void)
 {
-	char	str[];
+	int	s;
 
-    str[] = "HI";
-    int a ;
-    
-    //\a = ft_str_is_printable(str);
-    
+	s = '\f'; 
     //printf(" %d\n", str,a );
-    printf("  %d\n", ft_str_is_printable(str));
+    printf("  %d\n", ft_isprint(s));
 }
 */

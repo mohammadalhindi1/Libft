@@ -9,33 +9,43 @@
 /*   Updated: 2025/01/07 18:13:40 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
+//#include <string.h>
+//#include <bsd/bsd.h>
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 
 	i = 0;
-	size -= 1;
-	while (src[i] && (i < size))
+	if(size != 0)
 	{
-		dest[i] = src[i];
-		i++;
-	}
+		while (src[i] != '\0' && (i < size - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
 	dest[i] = '\0';
-	return (i);
+	}
+	return (ft_strlen(src));
 }
 
 /*
- int main()
+int	main(void)
 {
-	char	str[];
-	char	str2[];
+	char	str1[] = "mohammad";
+	char	str2[] = "abcdf";
 
-     str[] = "test de chaine";
-     str2[] = "abc123";
-     ft_strlcpy(str, str2, 5);
-     printf("%s\n", str);
-     return (0);
+	size_t size1 = strlcpy(str1, str2, 1);
+	printf("%s\n %ld\n", str1, size1);
+
+	char	str3[] = "mohammad";
+	char	str4[] = "abcdf";
+
+	size_t size2 = ft_strlcpy(str3, str4, 1);
+	printf("%s\n %ld\n", str3, size2);
+	return (0);
 }
 */
+

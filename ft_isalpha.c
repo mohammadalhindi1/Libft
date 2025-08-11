@@ -11,30 +11,19 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z'))
-			return (0);
-		i++;
-	}
-	return (1);
+	if(( c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z' ))
+		return(1);
+	return(0);
 }
 /*
- * int main(void)
+int main(void)
 {
-	char	str[];
+	int s;
 
-    str[] = "h2i";
-    int a ;
-    
-    a = ft_str_is_alpha(str);
-    
-    printf("%s - %d\n", str,a );
-    printf("%s - %d\n", str, ft_str_is_alpha(str));
+	s = 'j';    
+	printf("%c\n", s);
+	printf("%d\n",ft_isalpha(s));
 }
 */

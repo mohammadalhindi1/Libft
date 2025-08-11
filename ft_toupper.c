@@ -17,3 +17,12 @@ int	ft_toupper(int c)
 		c -= ' ';
 	return (c);
 }
+
+/*
+int	main(void)
+{
+	int c = 'z' ;
+
+	printf("%c",ft_toupper(c));
+}
+*/

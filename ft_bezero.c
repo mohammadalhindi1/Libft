@@ -25,3 +25,12 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+/*
+int	main(void)
+{
+	char str[] = "mohammad"; 
+	ft_bzero(str, 3);
+	printf("%s\n", str);
+}
+*/

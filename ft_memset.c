@@ -26,3 +26,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*
+int	main(void)
+{
+	char str[] = "mohammad"; 
+	ft_memset(str, 'a', 3);
+	printf("%s\n", str);
+}
+*/

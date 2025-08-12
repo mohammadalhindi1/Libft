@@ -26,6 +26,24 @@ size_t	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (s1[i] - s2[i]);
 	return (0);
 }
+
+/*
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while ((i < n) && (s1[i] || s2[i]))
+	{
+		if (s1[i] != s2[i])
+			return (((unsigned char)s1[i] - (unsigned char)s2[i]));
+		i++;
+	}
+	return (0);
+}*/
+
 /*
 int	main(void)
 {
@@ -33,8 +51,8 @@ int	main(void)
 	char	b[100];
 
 	strcpy(a, "A0234");
-	strcpy(b, "A02232");
-	printf("Result %i\n", ft_strncmp(a,b,5));
-	printf("Correction %i\n", strncmp(a,b,5));
+	strcpy(b, "A07232");
+	printf(" %i\n", ft_strncmp(a,b,5));
+	printf(" %i\n", strncmp(a,b,5));
 }
 */

@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 15:14:03 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/07 15:14:09 by malhendi         ###   ########.fr       */
+/*   Updated: 2025/08/12 18:17:11 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -22,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)(s + i));
 		i--;
 	}
-	return NULL;
+	return (NULL);
 }
 
 /*

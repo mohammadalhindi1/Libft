@@ -1,31 +1,34 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/10 20:35:49 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/10 20:35:51 by malhendi         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
+
+//#include <string.h>
+//#include <stdio.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*ptr;
-	unsigned char	*ptr1;
+	size_t	i;
 
-	if (n == 0)
-		return (0);
-	ptr = (unsigned char *)s1;
-	ptr1 = (unsigned char *)s2;
-	while ((*ptr == *ptr1) && n - 1 > 0)
+	i = 0;
+	while (i < n)
 	{
-		ptr++;
-		ptr1++;
-		n--;
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
 	}
-	return ((int)(*ptr - *ptr1));
+	return (0);
 }
+
+/*
+int main(void)
+{
+    char str1[] = "Hello";
+    char str2[] = "Hella";
+
+    int orig_cmp = memcmp(str1, str2, 5);
+    int my_cmp = ft_memcmp(str1, str2, 5);
+
+    printf("Orig_memcmp: %d\n", orig_cmp);
+    printf("My ft_memcmp: %d\n", my_cmp);
+
+    return 0;
+}
+*/

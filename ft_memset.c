@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/10 20:37:25 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/10 20:37:27 by malhendi         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -31,7 +19,12 @@ void	*ft_memset(void *s, int c, size_t n)
 int	main(void)
 {
 	char str[] = "mohammad"; 
-	ft_memset(str, 'a', 3);
+    char str2[] = "mohammad"; 
+    
+    memset(str, 'a', 3);
+	ft_memset(str2, 'a', 3);
+	
 	printf("%s\n", str);
+	printf("%s\n", str2);
 }
 */

@@ -1,7 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 20:35:49 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/14 17:03:59 by malhendi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//#include <string.h>
-//#include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

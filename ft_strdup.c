@@ -6,7 +6,7 @@
 /*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 20:43:56 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/12 18:17:30 by malhendi         ###   ########.fr       */
+/*   Updated: 2025/08/14 16:56:23 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ char	*ft_strdup(const char *src)
 	res[i] = '\0';
 	return (res);
 }
-/*
+
 int	main(void)
 {
 	printf("%s", ft_strdup("hindi"));
 	return (0);
 }
-*/
+

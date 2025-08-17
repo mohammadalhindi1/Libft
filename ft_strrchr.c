@@ -14,7 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (s[i])
 		i++;
 	while (i >= 0)
@@ -27,17 +29,19 @@ char	*ft_strrchr(const char *s, int c)
 }
 
 /*
-int main(void)
+int	main(void)
 {
-	char str[] = "mohammad";
-	char c = 'a';
-	char *res = ft_strrchr(str, c);
+	char	str[];
+	char	c;
+	char	*res;
 
+	str[] = "mohammad";
+	c = 'a';
+	res = ft_strrchr(str, c);
 	if (res)
 		printf("found '%c' at index %ld\n", *res, res - str);
 	else
 		printf("character '%c' not found\n", c);
-
-	return 0;
+	return (0);
 }
 */

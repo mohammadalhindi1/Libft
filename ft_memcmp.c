@@ -27,17 +27,19 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 
 /*
-int main(void)
+int	main(void)
 {
-    char str1[] = "Hello";
-    char str2[] = "Hella";
+	char	str1[];
+	char	str2[];
+	int		orig_cmp;
+	int		my_cmp;
 
-    int orig_cmp = memcmp(str1, str2, 5);
-    int my_cmp = ft_memcmp(str1, str2, 5);
-
+    str1[] = "Hello";
+    str2[] = "Hella";
+    orig_cmp = memcmp(str1, str2, 5);
+    my_cmp = ft_memcmp(str1, str2, 5);
     printf("Orig_memcmp: %d\n", orig_cmp);
     printf("My ft_memcmp: %d\n", my_cmp);
-
-    return 0;
+    return (0);
 }
 */

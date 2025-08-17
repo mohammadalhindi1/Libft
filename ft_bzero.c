@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bezero.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: malhendi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/10 20:43:56 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/14 16:56:23 by malhendi         ###   ########.fr       */
+/*   Created: 2025/08/10 18:21:37 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/10 18:21:40 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+void	ft_bzero(void *s, size_t n)
 {
-	int		i;
-	char	*res;
+	size_t	i;
+	char	*str;
 
-	i = ft_strlen(src);
-	res = malloc(sizeof(*res) * (i + 1));
-	if (res == NULL)
-		return (NULL);
+	str = s;
 	i = 0;
-	while (src[i])
+	while (i < n)
 	{
-		res[i] = src[i];
+		str[i] = '\0';
 		i++;
 	}
-	res[i] = '\0';
-	return (res);
 }
 
+/*
 int	main(void)
 {
-	printf("%s", ft_strdup("hindi"));
-	return (0);
+	char str[] = "mohammad"; 
+	ft_bzero(str, 3);
+	printf("%s\n", str);
 }
+*/

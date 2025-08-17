@@ -36,17 +36,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 }
 
 /*
-int main(void)
+int	main(void)
 {
-    char str1[] = "HellaWorld";
-    char str2[] = "HelloWorld";
+	char	str1[];
+	char	str2[];
 
+    str1[] = "HellaWorld";
+    str2[] = "HelloWorld";
     memmove(str1 + 5, str1, 5);
     ft_memmove(str2 + 5, str2, 5);
-
     printf("Origm_emmove: %s\n", str1);
     printf("My ft_memmove: %s\n", str2);
-
-    return 0;
+    return (0);
 }
 */

@@ -27,7 +27,7 @@ size_t	ft_strlen(const char *str)
 /*
 int	main(void)
 {
-	char *str;
+	char	*str;
 
 	str = "mohammad"; 
     printf("%zu\n", ft_strlen(str));

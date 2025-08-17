@@ -28,18 +28,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 }
 
 /*
-int main(void)
+int	main(void)
 {
-    char src[] = "Hello";
+	char	src[];
     char dest1[10];
     char dest2[10];
+
+    src[] = "Hello";
     
     memcpy(dest1, src, 6);
     ft_memcpy(dest2, src, 6);
-
     printf("Orig_memcpy: %s\n", dest1);
     printf("My ft_memcpyy: %s\n", dest2);
-
-    return 0;
+    return (0);
 }
 */

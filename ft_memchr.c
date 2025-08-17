@@ -27,16 +27,18 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 /*
-int main(void)
+int	main(void)
 {
-    const char str[] = "Hello World";
-   
-    void *orig_result = memchr(str, 'o', strlen(str));
-    void *my_result = ft_memchr(str, 'o', strlen(str));
+	const char	str[];
+	void		*orig_result;
+	void		*my_result;
 
+    str[] = "Hello World";
+   
+    orig_result = memchr(str, 'o', strlen(str));
+    my_result = ft_memchr(str, 'o', strlen(str));
     printf("Orig_memchr: %s\n", (char *)orig_result);
     printf("My ft_memchr: %s\n", (char *)my_result);
-
-    return 0;
+    return (0);
 }
 */

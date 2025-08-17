@@ -1,7 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/17 20:24:49 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/17 20:25:10 by malhendi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//ft_substr("Bonjour comment ca va?", 5, 8);
-//=> "ur comme"
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -20,19 +29,25 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new = (char *)malloc(sizeof(char) * (finish + 1));
 	if (!new)
 		return (NULL);
-	ft_strlcpy(new, s + start, finish + 1); 
+	ft_strlcpy(new, s + start, finish + 1);
 	return (new);
 }
 
 /*
-int main(void)
+int	main(void)
 {
     char *result;
+	char *result1;
 
     result = ft_substr("Bonjour comment ca va?", 5, 8);
     printf("Result: %s\n", result);
 
+	result1 = ft_substr("Bonjour comment ca va?", 5, 8);
+    printf("Result: %s\n", result1);
+
     free(result);
-    return 0;
+	free(result1);
+    return (0);
 }
 */
+

@@ -26,15 +26,17 @@ char	*ft_strchr(const char *s, int c)
 /*
 int	main(void)
 {
-	char str[] = "mohammad";
-	int c = 'a';
-	char *ptr = ft_strchr(str, c);
+	char	str[];
+	int		c;
+	char	*ptr;
 
+	str[] = "mohammad";
+	c = 'a';
+	ptr = ft_strchr(str, c);
 	if (ptr != NULL)
 		printf("Found char: %c at position: %ld\n", *ptr, ptr - str);
 	else
 		printf("Character not found!\n");
-
-	return 0;
+	return (0);
 }
 */

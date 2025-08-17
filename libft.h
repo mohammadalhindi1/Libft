@@ -6,7 +6,7 @@
 /*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 21:05:43 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/12 19:00:33 by malhendi         ###   ########.fr       */
+/*   Updated: 2025/08/17 20:08:27 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-#include <string.h>
+# include <string.h>
+# include "libft.h"
 
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);

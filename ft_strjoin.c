@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/18 16:59:08 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/18 17:00:25 by malhendi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -17,20 +29,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(new_string, s2, len1 + len2 + 1);
 	return (new_string);
 }
-
+/*
 int	main(void)
 {
 	char	*s1;
 	char	*s2;
     char *result;
-	char *result2;
+	char	*result2;
 
     s1 = "Hello,";
     s2 = " World!";
-
     result = ft_strjoin(s1, s2);
 	result2 = ft_strjoin(s1, s2);
-
     if (result == NULL)
     {
         printf("Error: Memory allocation failed.\n");
@@ -38,9 +48,8 @@ int	main(void)
     }
     printf("Joined string: %s\n", result); 
 	printf("Joined string: %s\n", result2);
-
 	free(result); 
     free(result2); 
     return (0);
 }
-
+*/

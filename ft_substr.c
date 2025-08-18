@@ -37,17 +37,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(void)
 {
     char *result;
-	char *result1;
+	char	*result1;
 
     result = ft_substr("Bonjour comment ca va?", 5, 8);
     printf("Result: %s\n", result);
-
 	result1 = ft_substr("Bonjour comment ca va?", 5, 8);
     printf("Result: %s\n", result1);
-
     free(result);
 	free(result1);
     return (0);
 }
 */
-

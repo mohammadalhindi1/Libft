@@ -6,7 +6,7 @@
 /*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 10:46:40 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/12 17:37:31 by malhendi         ###   ########.fr       */
+/*   Updated: 2025/08/18 18:09:10 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ char	*ft_strchr(const char *s, int c)
 /*
 int	main(void)
 {
-	char	str[];
+	char	*str;
 	int		c;
 	char	*ptr;
 
-	str[] = "mohammad";
-	c = 'a';
+	str = "mohammad";
+	c = 'z';
 	ptr = ft_strchr(str, c);
 	if (ptr != NULL)
 		printf("Found char: %c at position: %ld\n", *ptr, ptr - str);
@@ -40,3 +40,4 @@ int	main(void)
 	return (0);
 }
 */
+

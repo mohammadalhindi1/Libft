@@ -1,120 +1,120 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/18 17:17:56 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/18 20:21:29 by malhendi         ###   ########.fr       */
+/*   Created: 2025/08/18 18:09:41 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/19 16:30:48 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 🔹 دالة لتنظيف الذاكرة إذا فشل malloc */
-static void free_array(char **arr, int count)
+static char	**free_array(char **ptr, int i)
 {
-    while (count > 0)
-    {
-        free(arr[--count]);  // حرر كل كلمة
-    }
-    free(arr);  // حرر المصفوفة نفسها
+	while (i > 0)
+		free(ptr[--i]);
+	free(ptr);
+	return (0);
 }
 
-/* 🔹 دالة لحساب عدد الكلمات في النص */
-static int count_words(const char *s, char c)
+static int	ft_count_words(char const *str, char c)
 {
-    int count = 0;
-    int in_word = 0;
+	int	i;
+	int	count;
 
-    while (*s)
-    {
-        if (*s != c && !in_word) // بداية كلمة جديدة
-        {
-            in_word = 1;
-            count++;
-        }
-        else if (*s == c)        // رجعنا لفاصل
-            in_word = 0;
-        s++;
-    }
-    return count;
+	i = 0;
+	count = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+			i++;
+		else
+		{
+			count++;
+			while (str[i] && str[i] != c)
+				i++;
+		}
+	}
+	return (count);
 }
 
-/* 🔹 دالة لنسخ كلمة واحدة من النص */
-static char *copy_word(const char *start, int len)
+static char	*ft_putword(char *word, char const *s, int i, int word_len)
 {
-    char *word = malloc(len + 1); // تخصيص ذاكرة للكلمة
-    int i;
+	int	j;
 
-    if (!word)
-        return NULL;
-    for (i = 0; i < len; i++)
-        word[i] = start[i];      // نسخ الكلمة
-    word[i] = '\0';              // إنهاء بسطر فارغ
-    return word;
+	j = 0;
+	while (word_len > 0)
+	{
+		word[j] = s[i - word_len];
+		j++;
+		word_len--;
+	}
+	word[j] = '\0';
+	return (word);
 }
 
-/* 🔹 الدالة الرئيسية لتقسيم النص */
-char **ft_split(const char *s, char c)
+static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
 {
-    char **result;
-    int words, i = 0, j = 0, len = 0;
+	int	i;
+	int	word;
+	int	word_len;
 
-    if (!s)
-        return NULL;
-
-    words = count_words(s, c);
-    result = malloc((words + 1) * sizeof(char *));
-    if (!result)
-        return NULL;
-
-    while (s[i])
-    {
-        if (s[i] != c)  // بداية كلمة
-        {
-            int start = i;
-            while (s[i] && s[i] != c)
-            {
-                i++;
-                len++;
-            }
-            result[j] = copy_word(s + start, len); // انسخ الكلمة
-            if (!result[j])
-            {
-                free_array(result, j); // تنظيف إذا فشل
-                return NULL;
-            }
-            j++;
-            len = 0;
-        }
-        else
-            i++; // تخطي الفواصل
-    }
-    result[j] = NULL; // آخر عنصر NULL
-    return result;
+	i = 0;
+	word = 0;
+	word_len = 0;
+	while (word < num_words)
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		while (s[i] && s[i] != c)
+		{
+			i++;
+			word_len++;
+		}
+		s2[word] = (char *)malloc(sizeof(char) * (word_len + 1));
+		if (!s2[word])
+			return (free_array(s2, word));
+		ft_putword(s2[word], s, i, word_len);
+		word_len = 0;
+		word++;
+	}
+	s2[word] = 0;
+	return (s2);
 }
 
+char	**ft_split(char const *s, char c)
+{
+	char			**s2;
+	unsigned int	num_words;
+
+	if (!s)
+		return (0);
+	num_words = ft_count_words(s, c);
+	s2 = (char **)malloc(sizeof(char *) * (num_words + 1));
+	if (!s2)
+		return (0);
+	return (ft_split_words(s, c, s2, num_words));
+}
 /*
-int main()
+int	main(void)
 {
-    char **arr;
-    int i = 0;
+	char	**arr;
+	int		i;
 
-    arr = ft_split("hello 42   world split test", ' ');
-
-    if (!arr)
-        return 1;
-
-    while (arr[i])
-    {
-        printf("Word[%d]: %s\n", i, arr[i]);
-        free(arr[i]); 
-        i++;
-    }
-    free(arr);
-
-    return 0;
+	i = 0;
+	arr = ft_split("     hello 42   i am mohammad alhendi ", ' ');
+	if (!arr)
+		return (1);
+	while (arr[i])
+	{
+		printf("Word[%d]: %s\n", i, arr[i]);
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	return (0);
 }
 */

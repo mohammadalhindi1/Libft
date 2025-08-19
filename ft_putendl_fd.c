@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!s || fd == -1) 
+	if (!s || fd == -1)
 		return ;
 	while (*s)
 		write(fd, s++, 1);
@@ -22,10 +22,10 @@ void	ft_putendl_fd(char *s, int fd)
 }
 
 /*
-int main(void)
+int	main(void)
 {
     ft_putendl_fd("Hello, world!", 1);
     ft_putendl_fd("Error happened!", 2);
-    return 0;
+    return (0);
 }
 */

@@ -28,8 +28,8 @@ static int	ft_check_set(char const c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t size;
-	char *new;
+	size_t	size;
+	char	*new;
 
 	if (!s1 || !set)
 		return (NULL);

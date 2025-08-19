@@ -31,8 +31,10 @@ char	*ft_strdup(const char *src)
 	return (res);
 }
 
+/*
 int	main(void)
 {
 	printf("%s", ft_strdup("hindi"));
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 17:18:10 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/18 17:36:11 by malhendi         ###   ########.fr       */
+/*   Updated: 2025/08/19 17:41:11 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-    if(fd != -1 )
-        write(fd, &c, 1);
+	if (fd != -1)
+		write(fd, &c, 1);
 }

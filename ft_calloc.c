@@ -16,6 +16,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ary;
 
+	if (nmemb == 0 || size == 0)
+	{
+		ary = (void *)malloc(1);
+		if (ary == null)
+			return (NULL);
+		return (ary);
+	}
 	ary = (void *)malloc(nmemb * size);
 	if (ary == NULL)
 		return (NULL);

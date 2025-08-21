@@ -26,3 +26,24 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 	s[i] = '\0';
 }
+
+/*
+int main(void)
+{
+	char str[] = "mohammad";
+	int i;
+
+	printf("BEEFOR: %s\n", str);
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		str[i] = ft_toupper(str[i]);
+		i++;
+	}
+
+	printf("AFTTER:  %s\n", str);
+
+	return 0;
+}
+*/

@@ -21,9 +21,9 @@ void	ft_putstr_fd(char *s, int fd)
 /*
 int	main(void)
 {
-    ft_putstr_fd("Hello World!", 1);  // يطبع على الشاشة (stdout)
+    ft_putstr_fd("Hello World!", 1);
     write(1, "\n", 1);
-    ft_putstr_fd("Error happened!", 2); // يطبع على stderr
+    ft_putstr_fd("Error happened!", 2);
     write(2, "\n", 1);
     return (0);
 }

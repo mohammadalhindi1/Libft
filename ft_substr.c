@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: malhendi <malhendi@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 20:24:49 by malhendi          #+#    #+#             */
 /*   Updated: 2025/08/17 20:25:10 by malhendi         ###   ########.fr       */

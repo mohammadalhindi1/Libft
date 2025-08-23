@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: malhendi <malhendi@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 10:46:40 by malhendi          #+#    #+#             */
 /*   Updated: 2025/08/12 17:44:22 by malhendi         ###   ########.fr       */

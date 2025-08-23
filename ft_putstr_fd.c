@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: malhendi <malhendi@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/18 17:18:08 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/18 17:45:32 by malhendi         ###   ########.fr       */
+/*   Created: 2025/01/02 23:07:56 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/12 18:14:37 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	ft_putstr_fd(char *s, int fd)
 /*
 int	main(void)
 {
-    ft_putstr_fd("Hello World!", 1);
+    ft_putstr_fd("Hello World!", 1);  // يطبع على الشاشة (stdout)
     write(1, "\n", 1);
-    ft_putstr_fd("Error happened!", 2);
+    ft_putstr_fd("Error happened!", 2); // يطبع على stderr
     write(2, "\n", 1);
     return (0);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/18 17:17:51 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/19 17:38:24 by malhendi         ###   ########.fr       */
+/*   Created: 2025/01/02 23:07:56 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/21 23:41:47 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,20 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 }
 
 /*
-int main(void)
+int	main(void)
 {
-	char str[] = "mohammad";
-	int i;
+	char	str[];
+	int		i;
 
+	str[] = "mohammad";
 	printf("BEEFOR: %s\n", str);
-
 	i = 0;
 	while (str[i] != '\0')
 	{
 		str[i] = ft_toupper(str[i]);
 		i++;
 	}
-
 	printf("AFTTER:  %s\n", str);
-
-	return 0;
+	return (0);
 }
 */

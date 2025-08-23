@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malhendi <malhendi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/10 20:33:31 by malhendi          #+#    #+#             */
-/*   Updated: 2025/08/18 17:17:43 by malhendi         ###   ########.fr       */
+/*   Created: 2025/01/02 23:07:56 by malhendi          #+#    #+#             */
+/*   Updated: 2025/08/21 23:40:47 by malhendi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,37 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb == 0 || size == 0)
 	{
-		ary = (void *)malloc(1);
-		if (ary == null)
+		ary = malloc(1);
+		if (ary == NULL)
 			return (NULL);
 		return (ary);
 	}
-	ary = (void *)malloc(nmemb * size);
+	ary = malloc(nmemb * size);
 	if (ary == NULL)
 		return (NULL);
-	ft_bzero(ary, (nmemb * size));
+	ft_bzero(ary, nmemb * size);
 	return (ary);
 }
+
+/*
+int	main(void)
+{
+    int *arr;
+	size_t	n;
+    size_t i;
+
+    n = 5;
+    arr = ft_calloc(n, sizeof(int)); 
+    if (!arr)
+    {
+        printf("malloc failed\n");
+        return (1);
+    }
+    printf("ft_calloc:\n");
+    for (i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+    free(arr);
+    return (0);
+}
+*/

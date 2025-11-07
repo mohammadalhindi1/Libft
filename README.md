@@ -52,3 +52,8 @@ cc main.c libft.a
 **Mohammad Alhindi**  
 DevOps Engineer | Cloud & System Development  
 [GitHub](https://github.com/mohammadalhindi1)
+
+───────────────────────────────
+© 2025 Mohammad Alhindi — All Rights Reserved  
+Reusing or copying this code without permission is not cool — be original.
+───────────────────────────────
